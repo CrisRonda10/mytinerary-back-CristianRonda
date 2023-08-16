@@ -1,5 +1,4 @@
 import City from "../../models/City.js";
-
 export default async (req, res, next) => {
     try {
         console.log(req.query); //*QUERY ES UN OBJETO CON TODAS LAS CONSULTAS/IGUALDADES A BUSCAR EN LA BASE DE DATOS
@@ -36,5 +35,4 @@ export default async (req, res, next) => {
     } catch (error) {
         next(error)
     }
-    
 }
