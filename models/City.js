@@ -7,12 +7,13 @@ let schema = new Schema({
     population:{type:Number},
     photo:{ type:String,required:true},
     city: {type:String,required:true},
-    description:{type:String,default:"edit later"},
-    smalldescription:{type:String,default:"edit later"},
-    featuredLocation:{type:String,default:"edit later"},
+    description:{type:String,required:true},
+    smalldescription:{type:String,required:true},
+    featuredLocation:{type:String,required:true},
     admin_id:{type:Types.ObjectId,required:true,ref:'users'}
     //para relacionar datos en mongo es necesario referenciar el dato hacia la coleccion que necesito relacionarme
-})
+},{timestamps:true}
+)
 //estoy parado en el modelo city de la coleccion cities
 // y necesito relacionar la propiedad admin_id con la coleccion users
 //esto lo logro referenciando con la propiedad ref:'nombreDeLaColeccionaReferenciarse'
