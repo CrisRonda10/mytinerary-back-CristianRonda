@@ -17,7 +17,7 @@ export default async (req, res, next) => {
             //*si es 1 ordena ascendentemente
             //*si es -1 ordena descendentemente
         }
-        let allCities = await City.find(objetoDeBusqueda,'country city photo smalldescription admin_id').populate('admin_id','photo name mail -_id').sort(objetoDeOrdenamiento)
+        let allCities = await City.find(objetoDeBusqueda,'country city photo smalldescription admin_id').populate('admin_id','photo name mail -_id').sort(objetoDeOrdenamiento).limit(15)
         //let allCities = await City.find().select('country city photo smalldescription admin_id').populate('admin_id','photo name mail')
         if (allCities.length>0){
             return res.status(200).json({
