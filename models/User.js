@@ -8,7 +8,7 @@ let collection = 'users'
 // es decir el molde / la forma que tiene que tener mi modelo de datos
 let schema = new Schema({
     name: { type:String,required:true }, //por default todos los datos son opcionales (required:false)
-    lastName: { type:String }, // si es opcional no necesito agregar required
+    lastName: { type:String,required:true }, // si es opcional no necesito agregar required
     mail: { type:String,required:true,unique:true }, //unique:true comprueba que el mail sea unico (no mails duplicados)
     photo: { type:String,default:"https://www.cinemascomics.com/wp-content/uploads/2020/06/poder-darth-vader.jpg" },   //default
     password: {type:String,required:true},

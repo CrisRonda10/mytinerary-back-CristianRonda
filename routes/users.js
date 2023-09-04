@@ -9,8 +9,8 @@ let router = express.Router();
 //*router.metodo('/', funcion)
 
 //*Create
-router.post('/', create)
 router.get('/', read)
+router.post('/signup', create)
 router.get('/:id', readOne)
 router.put('/:id', update)
 router.delete('/:id', destroy)
