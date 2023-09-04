@@ -1,7 +1,8 @@
 import express from 'express';
 //el enrutador principal va a llamar a todos los recursos y los va a enrutar 
 import userRouter from './users.js';
-import cityRouter from './cities.js'
+import cityRouter from './cities.js';
+import itinerariesRouter from './itineraries.js';
 
 let router = express.Router();
 
@@ -15,4 +16,5 @@ router.use('/users',userRouter);
 //1º la palabra con la que se va a enrutar
 //2º el enrutador que tengo que conectar
 router.use('/cities',cityRouter)
+router.use('/itineraries', itinerariesRouter)
 export default router
