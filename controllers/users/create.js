@@ -1,5 +1,6 @@
 import User from "../../models/User.js";
 export default async (req, res) => {
+    //console.log(req.body);
     try {
         let newUser = await User.create(req.body)
         return res.status(201).json({
